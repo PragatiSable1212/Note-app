@@ -27,7 +27,7 @@ export class TasksController
     @Get()
     getTask():Promise<Tasks[]>
     {
-        console.log('Hello from NestJS!');
+        console.log('Welcome to new branch');
         return this.tasksService.getTasks();
     }
 
@@ -35,5 +35,10 @@ export class TasksController
     getById(@Param('id') id: string): Promise<Tasks | null>
     {
         return this.tasksService.getTaskById(id);
+    }
+
+    getData():String
+    {
+        return "Hello from getData()";
     }
 }
